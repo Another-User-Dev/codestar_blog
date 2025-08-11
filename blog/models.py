@@ -17,7 +17,6 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     
 class Comment(models.model):
-    author = models.ForeignKey(
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments"
     )
